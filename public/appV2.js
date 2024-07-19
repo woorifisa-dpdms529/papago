@@ -1,3 +1,5 @@
+import { detectLanguage, translateLanguage } from "./api.js";
+
 const [sourceSelect, targetSelect] = document.getElementsByTagName("select");
 const [sourceTextArea, targetTextArea] = document.getElementsByTagName("textarea");
 
@@ -10,7 +12,9 @@ sourceTextArea.addEventListener("input", (event) => {
 
   timer = setTimeout(async () => {
     const text = event.target.value;
-    const result = await detectLanguage(text);
-    translateLanguage(result, text);
+    const result = await detectLanguage("/detect", text);
+    sourceSelect.value = result;
+    const translatedText = await translateLanguage(result, targetSelect.value, text, "/translate");
+    targetTextArea.value = translatedText;
   }, 1500);
 });

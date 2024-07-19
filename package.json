@@ -1,7 +1,7 @@
 {
   "name": "5.papago",
   "version": "1.0.0",
-  "description": "",
+  "description": "papago project",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "superagent": "^9.0.2"
   }

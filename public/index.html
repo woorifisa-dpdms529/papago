@@ -75,7 +75,7 @@
                 <div class="flex">
                     <div>
                         <div class="flex items-center mr-4 space-x-2">
-                            <label class="switch">
+                            <label class="switch" data-cy="darkmode-toggle">
                                 <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                         <g fill="#ff8352">
                                             <circle r="5" cy="12" cx="12"></circle>
@@ -127,6 +127,7 @@
                     <div class="flex-auto mt-3 h-1/2 border-t-[1px]">
                         <div class="block h-full p-2 text-base">
                             <textarea
+                                data-cy='source-textarea'
                                 class="w-full h-full p-2 text-4xl outline-none resize-none textarea placeholder:text-gray-400 dark:bg-slate-800 dark:text-white dark:placeholder:text-white"
                                 placeholder="번역할 내용을 입력하세요" id="translate-box" autofocus></textarea>
                         </div>
@@ -167,6 +168,7 @@
                     <div class="flex-auto mt-3 h-1/2 border-t-[1px]">
                         <div class="block h-full p-2">
                             <textarea
+                                data-cy="target-textarea"
                                 class="w-full h-full p-2 mr-3 text-lg outline-none resize-none textarea dark:bg-slate-800 dark:text-white"></textarea>
                         </div>
                     </div>
